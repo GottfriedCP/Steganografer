@@ -238,9 +238,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 450);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(133, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "By GP";
+            this.label5.Text = "rev2 By AO, ARU, DD, GP";
             // 
             // Form1
             // 

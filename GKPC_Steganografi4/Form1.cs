@@ -13,8 +13,9 @@ namespace GKPC_Steganografi4
 {
     public partial class Form1 : Form
     {
-        Bitmap gambarBmp;
+        Bitmap gambarBmp, gambarBmpTemp;
         string namaFile = "";
+        string hint = "PETUNJUK: Muat Gambar, lalu pilih Enkrip / Dekrip :)";
 
         public Form1()
         {
@@ -23,7 +24,15 @@ namespace GKPC_Steganografi4
 
         private void btnClr_Click(object sender, EventArgs e)
         {
+            // Dispose Image pada picBox
+            if (picBox1.Image != null) { picBox1.Image.Dispose(); }
+            // Dispose gambarBmp
+            if (gambarBmp != null) { gambarBmp.Dispose(); }
+            picBox1.Image = null;
             txtInOut.Text = "";
+            namaFile = "";
+            lblNama.Text = hint;
+            txtInOut.Enabled = false;
         }
 
 
@@ -41,7 +50,7 @@ namespace GKPC_Steganografi4
             else
             {
                 // Algoritma dilakukan oleh kelas tersendiri (Steganografi)
-                gambarBmp = Steganografi.Encrypt(txtInOut.Text, gambarBmp);
+                gambarBmpTemp = Steganografi.Encrypt(txtInOut.Text, gambarBmp);
 
                 // Menyimpan gambar dengan pesan teks tersembunyi sbg gambar baru 
                 SaveFileDialog saveFD = new SaveFileDialog();
@@ -55,14 +64,15 @@ namespace GKPC_Steganografi4
                         {
                             using (FileStream fs = new FileStream(saveFD.FileName, FileMode.Create, FileAccess.ReadWrite))
                             {
-                                gambarBmp.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
+                                gambarBmpTemp.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
                                 byte[] bytes = memory.ToArray();
                                 fs.Write(bytes, 0, bytes.Length);
                             }
                         }
-                        //gambarBmp.Save(saveFD.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
                         MessageBox.Show("Gambar berhasil disimpan", "STATUS", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                        //gambarBmp.Dispose();
+                        // Ada bug ketika dekrip gambar yg seharusnya tidak mengandung pesan, jika kode dibawah dihapus :(
+                        if (gambarBmp != null) { gambarBmp.Dispose(); }
+                        gambarBmp = new Bitmap(namaFile);
                     }
                     catch (Exception err)
                     {
@@ -146,7 +156,7 @@ namespace GKPC_Steganografi4
         private void Form1_Load(object sender, EventArgs e)
         {
             txtInOut.Enabled = false;
-            lblNama.Text = "HINT: Muat Gambar, ketik pesan teks, lalu pilih Enkrip ke Gambar";
+            lblNama.Text = hint;
         }
     }
 }
