@@ -91,13 +91,14 @@
             // 
             // btnEnc
             // 
+            this.btnEnc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnc.Location = new System.Drawing.Point(498, 405);
             this.btnEnc.Name = "btnEnc";
             this.btnEnc.Size = new System.Drawing.Size(156, 42);
             this.btnEnc.TabIndex = 2;
-            this.btnEnc.Text = "ENCRYPT KE GAMBAR";
+            this.btnEnc.Text = "HIDE";
             this.btnEnc.UseVisualStyleBackColor = true;
-            this.btnEnc.Click += new System.EventHandler(this.btnEnc_Click);
+            this.btnEnc.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnClr
             // 
@@ -224,13 +225,14 @@
             // 
             // btnDec
             // 
+            this.btnDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDec.Location = new System.Drawing.Point(498, 241);
             this.btnDec.Name = "btnDec";
             this.btnDec.Size = new System.Drawing.Size(156, 42);
             this.btnDec.TabIndex = 3;
-            this.btnDec.Text = "DECRYPT PESAN";
+            this.btnDec.Text = "EKSTRAK";
             this.btnDec.UseVisualStyleBackColor = true;
-            this.btnDec.Click += new System.EventHandler(this.btnDec_Click);
+            this.btnDec.Click += new System.EventHandler(this.btnEkstrak_Click);
             // 
             // label5
             // 

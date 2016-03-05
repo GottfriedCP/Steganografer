@@ -37,7 +37,7 @@ namespace GKPC_Steganografi4
 
 
         // Button utk enkripsi teks ke dalam gambar
-        private void btnEnc_Click(object sender, EventArgs e)
+        private void btnHide_Click(object sender, EventArgs e)
         {
             if (namaFile == "" && txtInOut.Text == "")
             {
@@ -50,7 +50,7 @@ namespace GKPC_Steganografi4
             else
             {
                 // Algoritma dilakukan oleh kelas tersendiri (Steganografi)
-                gambarBmpTemp = Steganografi.Encrypt(txtInOut.Text, gambarBmp);
+                gambarBmpTemp = Steganografi.Hide(txtInOut.Text, gambarBmp);
 
                 // Menyimpan gambar dengan pesan teks tersembunyi sbg gambar baru 
                 SaveFileDialog saveFD = new SaveFileDialog();
@@ -132,7 +132,7 @@ namespace GKPC_Steganografi4
         }
 
         // Button utk dekripsi gambar (menampilkan pesan teks rahasia)
-        private void btnDec_Click(object sender, EventArgs e)
+        private void btnEkstrak_Click(object sender, EventArgs e)
         {
             if (namaFile == "")
             {
@@ -140,14 +140,14 @@ namespace GKPC_Steganografi4
             }
             else
             {
-                if (Steganografi.Decrypt(gambarBmp).Length > 20000)
+                if (Steganografi.Ekstrak(gambarBmp).Length > 20000)
                 {
                     MessageBox.Show("Isi pesan terlalu besar", caption: "ERROR", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
                 }
                 else
                 {
                     // Algoritma dilakukan oleh kelas tersendiri (Steganografi)
-                    txtInOut.Text = Steganografi.Decrypt(gambarBmp);
+                    txtInOut.Text = Steganografi.Ekstrak(gambarBmp);
                     lblInOut.Text = "PESAN DALAM GAMBAR:";
                 }
             }

@@ -1,5 +1,5 @@
 ﻿/*
-    - Kelas utama yang digunakan utk Steganografi, baik Enkrip maupun Dekrip
+    - Kelas utama yang digunakan utk Steganografi, baik Hide maupun Ekstrak
 */
 
 using System;
@@ -15,7 +15,7 @@ namespace GKPC_Steganografi4
             Mengisi_Nol
         };
 
-        public static Bitmap Encrypt(string teks, Bitmap bmp)
+        public static Bitmap Hide(string teks, Bitmap bmp)
         {
             Status status = Status.Menyembunyikan;
 
@@ -112,7 +112,7 @@ namespace GKPC_Steganografi4
             return bmp;
         }
 
-        public static String Decrypt(Bitmap bmp)
+        public static String Ekstrak(Bitmap bmp)
         {
             int clrUnitIdx = 0;
             int charVal = 0;
@@ -168,15 +168,16 @@ namespace GKPC_Steganografi4
             return teksHasil;
         }
 
+        // Method pembantu yang digunakan untuk membaca bit dari belakang (reverse)
         public static int reverseBits(int n)
         {
-            int result = 0;
+            int hasil = 0;
             for (int i = 0; i < 8; i++)
             {
-                result = result * 2 + n % 2;
+                hasil = hasil * 2 + n % 2;
                 n /= 2;
             }
-            return result;
+            return hasil;
         }
     }
 }
