@@ -7,3 +7,12 @@ k:\users\gottfried\documents\visual studio 2015\Projects\GKPC_Steganografi4\GKPC
 k:\users\gottfried\documents\visual studio 2015\Projects\GKPC_Steganografi4\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.csproj.GenerateResource.Cache
 k:\users\gottfried\documents\visual studio 2015\Projects\GKPC_Steganografi4\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.exe
 k:\users\gottfried\documents\visual studio 2015\Projects\GKPC_Steganografi4\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.pdb
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\bin\Debug\GKPC_Steganografi4.exe.config
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.exe
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.pdb
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\bin\Debug\GKPC_Steganografi4.exe
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\bin\Debug\GKPC_Steganografi4.pdb
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.csprojResolveAssemblyReference.cache
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.Form1.resources
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.Properties.Resources.resources
+K:\Users\Gottfried\Documents\Visual Studio 2015\Projects\Steganografi\GKPC_Steganografi4\obj\Debug\GKPC_Steganografi4.csproj.GenerateResource.Cache
