@@ -15,7 +15,7 @@ namespace GKPC_Steganografi4
     {
         Bitmap gambarBmp, gambarBmpTemp;
         string namaFile = "";
-        string hint = "PETUNJUK: Muat Gambar, lalu pilih Enkrip / Dekrip :)";
+        string hint = "PETUNJUK: Muat Gambar, lalu pilih Hide / Ekstrak :)";
 
         public Form1()
         {
@@ -103,12 +103,15 @@ namespace GKPC_Steganografi4
                 if (gambarBmp != null) { gambarBmp.Dispose(); }
                 gambarBmp = new Bitmap(namaFile);
 
+                // Membatasi maks karakter pd Textbox sesuai dengan kapasitas gambar
+                txtInOut.MaxLength = gambarBmp.Height * gambarBmp.Width * 3 / 8;
+
                 // Kode-kode untuk menampilkan detail gambar
                 lblHei.Text = gambarBmp.Height.ToString() + " px";
                 lblWid.Text = gambarBmp.Width.ToString() + " px";
                 lblHres.Text = gambarBmp.HorizontalResolution.ToString() + " px/inch";
                 lblVres.Text = gambarBmp.VerticalResolution.ToString() + " px/inch";
-                lblInOut.Text = "PESAN UNTUK DISIMPAN:";
+                lblInOut.Text = "PESAN UNTUK DISIMPAN (MAKS " + txtInOut.MaxLength.ToString() + " karakter):";
             }
         }
 
