@@ -1,5 +1,5 @@
-# Steganografi
-Steganografer - Program untuk menyembunyikan teks dalam gambar digital (format Bmp/Jpeg/Png) lalu menyimpannya sebagai file gambar baru dalam format Bmp
+# Steganografer
+Program untuk menyembunyikan teks dalam gambar digital (format Bmp/Jpeg/Png) lalu menyimpannya sebagai file gambar baru dalam format Bmp
 
 ## Overview
 Program dibuat dalam bahasa C# menggunakan Visual Studio Express 2015, memanfaatkan beberapa kelas bawaan yang tersedia
